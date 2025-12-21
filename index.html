@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+    </script>
+</head>
+<body>
+
+<nav>
+    <h1>Vhonani</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeBtn">🌙</button>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="section hero">
+    <img src="image3.jpg" alt="Profile" class="profile-img">
+    <h2 class="fade-in">Hello, I'm <span>Vhonani</span></h2>
+    <p class="fade-in delay">Web Developer & IT Student</p>
+    <!-- Hire Me Button -->
+    <a href="mailto:mpfunivhonani46@gmail.com?subject=Hire%20Me&body=Hello%20Vhonani" class="hire-btn">
+        Hire Me
+    </a>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <p>
+        I am a motivated and detail-oriented Information Technology student with a strong
+        passion for web development and modern technologies. I enjoy creating interactive,
+        user-friendly websites and continuously improving my skills through hands-on projects
+        and self-learning.
+    </p>
+    <p>
+        My journey in IT has given me a solid foundation in front-end development, where I work
+        with HTML, CSS, and JavaScript to build responsive and visually appealing interfaces.
+        I am also familiar with React and enjoy exploring how JavaScript frameworks improve
+        performance and user experience.
+    </p>
+    <p>
+        Beyond coding, I value problem-solving, creative thinking, and effective communication.
+        I am always eager to learn new technologies, collaborate with others, and take on
+        challenges that help me grow both technically and professionally.
+    </p>
+    <p>
+        My goal is to become a skilled software or web developer, contribute to real-world
+        projects, and build solutions that make a positive impact. I am currently seeking
+        opportunities to gain practical experience and expand my knowledge in the tech industry.
+    </p>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section reveal">
+    <h2>My Projects</h2>
+    <div class="projects" id="projectsContainer"></div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" alt="Project Image">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <a id="modalLink" href="#" target="_blank">View Project</a>
+    </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section reveal">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <input type="text" name="user_name" placeholder="Your Name" required>
+        <input type="email" name="user_email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <p id="message"></p>
+</section>
+
+<footer>
+    © 2025 Vhonani | All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
